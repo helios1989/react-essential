@@ -23,7 +23,7 @@ class AppIndex extends Component {
             </div>
             <div className="row">
                 <div className="col-xs-10 col-xs-offset-1">
-                    <Home name={name} age={age} user={user}>
+                    <Home name={name} initialAge={age} user={user}>
 
                     {content}
                     </Home>
