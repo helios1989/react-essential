@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Header from './component/Header';
+import {Header} from './component/Header';
 import Home from './component/Home';
 
 class AppIndex extends Component {

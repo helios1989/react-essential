@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Header extends Component {
+export  const  Header = (props) => {
     // eslint-disable-next-line
-    render() {
-        return (
-            <nav className="navbar navbar-default">
-                <div className="container">
-                    <div className="navbar-header">
-                        <ul className="nav navbar-nav">
-                            <li><a href="home">Home</a></li>
-                        </ul>
-                    </div>
+    
+    return (
+        <nav className="navbar navbar-default">
+            <div className="container">
+                <div className="navbar-header">
+                    <ul className="nav navbar-nav">
+                        <li><a href="home">Home</a></li>
+                    </ul>
                 </div>
-            </nav>
-        );
-    }
+            </div>
+        </nav>
+    );
+    
 }
