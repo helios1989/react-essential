@@ -7,7 +7,8 @@ export default class Home extends Component {
         this.age = props.age;
         this.state = {
             age: props.initialAge,
-            status: 0
+            status: 0,
+            homeLink: "Change Link"
         }
     }
     onMakeOlder() {
@@ -17,7 +18,9 @@ export default class Home extends Component {
         this.age+=3;
         console.log(this.age);
     }
-
+    onChangeLink() {
+        this.props.changeLink(this.state.homeLink);
+    }
     render() {
         let content = '';
         if (this.props) {
@@ -36,6 +39,8 @@ export default class Home extends Component {
                 </p>
                 <button onClick={()=> this.onMakeOlder()}>Make me older</button>
                 <button onClick={ this.props.greet}>Green</button>
+                <button className="btn btn-primary" onClick={this.onChangeLink.bind(this)}>
+                Change Header Link</button>
                 {/* Other technique */}
                 {/* <button onClick={this.onMakeOlder.bind(this)}className="btn btn-success">Make me older</button> */}
             </div>
