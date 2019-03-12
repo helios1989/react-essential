@@ -3,6 +3,9 @@ import {Header} from './component/Header';
 import Home from './component/Home';
 
 class AppIndex extends Component {
+    onGreet() {
+        alert('hello');
+    }
     render() {
         let content = "";
         const name = "VERGEL";
@@ -23,9 +26,8 @@ class AppIndex extends Component {
             </div>
             <div className="row">
                 <div className="col-xs-10 col-xs-offset-1">
-                    <Home name={name} initialAge={age} user={user}>
-
-                    {content}
+                    <Home name={name} initialAge={age} user={user} greet={this.onGreet}>
+                        {content}
                     </Home>
                     {/* <Home/> */}
                 </div>

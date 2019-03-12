@@ -35,6 +35,7 @@ export default class Home extends Component {
                     {this.props.children}
                 </p>
                 <button onClick={()=> this.onMakeOlder()}>Make me older</button>
+                <button onClick={ this.props.greet}>Green</button>
                 {/* Other technique */}
                 {/* <button onClick={this.onMakeOlder.bind(this)}className="btn btn-success">Make me older</button> */}
             </div>
@@ -48,5 +49,6 @@ export default class Home extends Component {
 Home.propTypes = {
     name: PropTypes.string,
     age: PropTypes.number,
-    user: PropTypes.object
+    user: PropTypes.object,
+    greet: PropTypes.func
 }
